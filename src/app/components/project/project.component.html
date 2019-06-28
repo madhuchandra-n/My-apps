@@ -1,0 +1,28 @@
+<div class="card">
+  <div *ngIf="newAns1" class="project-title text-center">
+    Project: {{newAns1.project}}
+  </div>
+  <div *ngIf="newAns1">
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>About Client: {{newAns1.client}}</p>
+        <p class="blockquote">
+          <li title="Source Title">{{newAns1.details}}</li>
+        </p>
+        <p>Start Date</p>
+        <p class="blockquote">
+          <li title="Source Title">{{newAns1.start_date}}</li>
+        </p>
+        <p>Features</p>
+        
+        <p>End Date</p>
+        <p class="blockquote">
+          <li title="Source Title"> {{newAns1.end_date}}</li>
+        </p>
+      </blockquote>
+    </div>
+  </div>
+  <div *ngIf="!newAns1" class="card-header text-center">
+    Select a project from the list
+  </div>
+</div>

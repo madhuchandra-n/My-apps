@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StartupService } from './libs/services/startup.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-apps';
+  constructor (private core: StartupService){
+    this.core.init();
+  }
 }

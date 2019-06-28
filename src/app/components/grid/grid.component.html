@@ -1,0 +1,30 @@
+<div>
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="&#61442;  Select project and details">
+</div>
+
+<!-- <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let n of names | filter:searchText">
+                    <td>{{n.id}}</td>
+                    <td>{{n.user}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+<div>
+    <ul *ngFor="let n of names | filter:searchText" class="list-group list-group-flush">
+        <li class="list-group-item"  [class.active]="n.id == selectedRow" (click)="myClickFunction(n.id)">{{n.project}}</li>
+    </ul>
+</div>
+<div *ngIf="(names | filter:searchText).length== 0">
+    <li class="list-group-item">
+        No data Found
+    </li>
+
+</div>

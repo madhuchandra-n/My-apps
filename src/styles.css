@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.project-title{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); */
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    overflow: hidden;
+    display: block;
+    word-wrap: break-word;
+    background-color:#90d1df !important;
+    color: white;
+}
+.list-group-item.active{
+    background-color:#90d1df !important;
+  color: white;
+}
+.blockquote{
+  display: block;
+    font-size: 100%;
+    color: #6c757d !important;
+}
+p{
+  color: #033d47 ;
+}

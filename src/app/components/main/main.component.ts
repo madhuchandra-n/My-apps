@@ -10,7 +10,6 @@ export class MainComponent implements OnInit {
   items: any;
   title = 'Projects';
   currentItem = 'items';
-  @Output() newItemEvent = new EventEmitter<string>();
   constructor(public apiUrl: ConfigService) { }
 
   ngOnInit() {

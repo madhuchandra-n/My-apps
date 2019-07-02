@@ -3,21 +3,25 @@
         placeholder="&#61442;  Select project and details">
 </div>
 
-<!-- <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>User</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let n of names | filter:searchText">
-                    <td>{{n.id}}</td>
-                    <td>{{n.user}}</td>
-                </tr>
-            </tbody>
-        </table> -->
-<div>
+<kendo-grid [kendoGridBinding]="names | filter:searchText"
+    [selectable]="true" (cellClick)="myClickFunction($event)">
+    <kendo-grid-column field="project" title="Project">
+    </kendo-grid-column>
+    <kendo-grid-column field="client" title="Feature">
+    </kendo-grid-column>
+    <kendo-grid-column field="project" title="Category">
+    </kendo-grid-column>
+    <!-- <kendo-grid-column field="UnitPrice" title="Price" width="80">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+    </kendo-grid-column> -->
+    <!-- <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </ng-template>
+    </kendo-grid-column> -->
+</kendo-grid>
+<!-- <div>
     <ul *ngFor="let n of names | filter:searchText" class="list-group list-group-flush">
         <li class="list-group-item"  [class.active]="n.id == selectedRow" (click)="myClickFunction(n.id)">{{n.project}}</li>
     </ul>
@@ -27,4 +31,4 @@
         No data Found
     </li>
 
-</div>
+</div> -->

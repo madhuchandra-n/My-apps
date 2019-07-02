@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ApiService } from '../../libs/services/api.service';
 import { ConfigService } from '../../libs/services/config.service';
-
+import { GridDataResult, SelectionEvent } from "@progress/kendo-angular-grid";
+import { SortDescriptor, orderBy } from "@progress/kendo-data-query";
 @Component({
   selector: 'app-Grid',
   templateUrl: './Grid.component.html',
@@ -37,12 +38,11 @@ export class GridComponent implements OnInit {
       console.log(err.message)
     });
   }
-  private myClickFunction(n)
+  private myClickFunction(a)
   {
-    console.log(n);
-    this.passingId=n;
+    this.passingId=a.dataItem.id;
     this.addNewItem(this.passingId);
-    this.selectedRow=n;
+    this.selectedRow=a.dataItem.id;
   }
   addNewItem(value: any) {
     this.newItemEvent.emit(value);

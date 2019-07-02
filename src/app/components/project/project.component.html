@@ -1,36 +1,95 @@
 <div class="card">
-  <div *ngIf="newAns1" class="project-title text-center">
-    Project: {{newAns1.project}}
-  </div>
-  <div *ngIf="newAns1">
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>About Client: {{newAns1.client}}</p>
-        <p class="blockquote">
-          <li title="Source Title">{{newAns1.details}}</li>
-        </p>
-        <p>Start Date</p>
-        <p class="blockquote">
-          <li title="Source Title">{{newAns1.start_date}}</li>
-        </p>
-        <p>Features</p>
-        <p class="blockquote">
-          <li title="Source Title"> {{newAns1.code1}}</li>
-        </p>
-        <p class="blockquote">
-          <li title="Source Title"> {{newAns1.code}}</li>
-        </p>
-        <p class="blockquote">
-          <li title="Source Title"> {{newAns1.git_repo}}</li>
-        </p>
-        <p>End Date</p>
-        <p class="blockquote">
-          <li title="Source Title"> {{newAns1.end_date}}</li>
-        </p>
-      </blockquote>
+    <div *ngIf="newAns1" class="project-title text-center">
+        Project: {{newAns1.project}}
+        <button type="button" *ngIf="clickedTrue==false" class="btn btn-info" (click)="changeToEdit($event)">
+            Edit
+        </button>
+        <button type="button" *ngIf="clickedTrue==true" class="btn btn-info" (click)="submitChange($event)">
+            Save
+        </button>
     </div>
-  </div>
-  <div *ngIf="!newAns1" class="card-header text-center">
-    Select a project from the list
-  </div>
+    <div *ngIf="newAns1 && clickedTrue==false">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>About Client : {{newAns1.client}}</p>
+                <p class="blockquote">
+                    <li title="Source Title">{{newAns1.details}}</li>
+                </p>
+                <p>Start Date</p>
+                <p class="blockquote">
+                    <li title="Source Title">{{newAns1.start_date}}</li>
+                </p>
+                <p>Features</p>
+                <p class="blockquote">
+                    <li title="Source Title"> {{newAns1.code1}}</li>
+                </p>
+                <p class="blockquote">
+                    <li title="Source Title"> {{newAns1.code}}</li>
+                </p>
+                <p class="blockquote">
+                    <li title="Source Title"> {{newAns1.git_repo}}</li>
+                </p>
+                <p>End Date</p>
+                <p class="blockquote">
+                    <li title="Source Title"> {{newAns1.end_date}}</li>
+                </p>
+            </blockquote>
+        </div>
+    </div>
+    <div *ngIf="!newAns1" class="card-header text-center">
+        Select a project from the list
+    </div>
+</div>
+    <div *ngIf="newAns1 && clickedTrue==true" class="jumbotron">
+        <div class="container">
+            <form (ngSubmit)="onSubmit()" [formGroup]="SignupForm">
+                <div class="form-group">
+                    <label>Project</label>
+                    <input type="text" [(ngModel)]="newAns1.project" class="form-control" formControlName="project" />
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Client</label>
+                    <input type="text" [(ngModel)]="newAns1.client" class="form-control" formControlName="client" />
+                </div>
+                <div class="form-group">
+                    <label for="firstName">About Client</label>
+                    <br>
+                    <textarea class="k-textarea" [(ngModel)]="newAns1.details" formControlName="details"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Features</label>
+                    <br>
+                    <input type="text" [(ngModel)]="newAns1.code" class="form-control" formControlName="code" />
+                    <input type="text" [(ngModel)]="newAns1.code1" class="form-control" formControlName="code1" />
+                    <input type="text" [(ngModel)]="newAns1.git_repo" class="form-control" formControlName="git_repo" />
+                </div>
+                <div class="form-group">
+                        <label>Start Date:</label>
+                        <br>
+                        <input type="text"
+                        [(ngModel)]="newAns1.start_date"
+                        class="form-control"
+                        formControlName="start_date"
+                        bsDatepicker >
+                        <br>
+                </div>
+                
+                <div class="form-group">
+                    <label>End Date:</label>
+                    <br>
+                    <input type="text"
+                        [(ngModel)]="newAns1.end_date"
+                        class="form-control"
+                        formControlName="end_date"
+                        bsDatepicker >
+                    <br>
+                </div>
+                <div class="form-row">
+                        <button type="submit">Save</button>
+                </div>
+                <div *ngIf="payLoad" class="form-row">
+                        <strong>Saved the following values</strong><br>{{payLoad}}
+                </div>
+            </form>
+        </div>
 </div>

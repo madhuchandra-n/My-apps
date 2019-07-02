@@ -6,14 +6,16 @@ import { GridComponent } from '../app/components/grid/grid.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../app/libs/services/api.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './components/project/project.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { MainComponent } from './components/main/main.component';
-
-
+import { GridModule } from '@progress/kendo-angular-grid';
+import { IntlModule } from '@progress/kendo-angular-intl';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { BsDatepickerModule} from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,12 @@ import { MainComponent } from './components/main/main.component';
     Ng2SearchPipeModule,
     InputsModule,
     BrowserAnimationsModule,
-    DropDownsModule
+    DropDownsModule,
+    GridModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule, IntlModule, DateInputsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

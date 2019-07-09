@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 import { GridComponent } from '../app/components/grid/grid.component';
-import { ProjectComponent } from './components/project/project.component';
+import { ProjectComponent } from './components/app-project/app-project.component';
 import { MainComponent } from './components/main/main.component';
 
 @NgModule({

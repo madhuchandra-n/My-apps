@@ -6,8 +6,8 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@ang
 
 @Component({
   selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  templateUrl: './app-project.component.html',
+  styleUrls: ['./app-project.component.css']
 })
 export class ProjectComponent implements OnInit {
   selectedPost: any;

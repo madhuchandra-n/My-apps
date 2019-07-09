@@ -8,20 +8,31 @@ import { BehaviorSubject } from 'rxjs';
 export class ConfigService {
 
   _apiBaseUrl: any;
+  _apiMockUrl: any;
 
   constructor(private http: HttpClient) {
     var gcfModel = this.readGcfModelFromIndexHtml();
 
     this._apiBaseUrl = gcfModel['api'];
+    this._apiMockUrl = gcfModel['api1'];
   }
   public get apiBaseUrl() { return this._apiBaseUrl; }
   public setApiBaseUrl(apiBaseUrl?) {
     if (apiBaseUrl)
       this._apiBaseUrl = apiBaseUrl;
+  } 
+  public get apiMockUrl() { return this._apiMockUrl; }
+  public setApiMockUrl(apiMockUrl?) {
+    if (apiMockUrl)
+      this._apiMockUrl = apiMockUrl;
   }
   public getData(value)
   {
     return this.http.get(this._apiBaseUrl+value);
+  }
+  public getMetaData()
+  {
+    return this.http.get(this._apiMockUrl);
   }
   private readGcfModelFromIndexHtml() {
 

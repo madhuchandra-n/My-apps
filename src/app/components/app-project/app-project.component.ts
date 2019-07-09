@@ -3,11 +3,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ConfigService } from 'src/app/libs/services/config.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
-
 @Component({
   selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  templateUrl: './app-project.component.html',
+  styleUrls: ['./app-project.component.css']
 })
 export class ProjectComponent implements OnInit {
   selectedPost: any;
@@ -26,6 +25,7 @@ export class ProjectComponent implements OnInit {
   clickedTrue= false;
   SignupForm: FormGroup;
   payLoad: string;
+  meta: any;
   constructor(public apiUrl: ConfigService, private route: ActivatedRoute) { 
   }
 
@@ -42,10 +42,20 @@ export class ProjectComponent implements OnInit {
         });
     this.apiUrl._demoSubject.subscribe(res=>{
       this.id=res;
+      this.getMeta();
       this.fetchData();    
       this.clickedTrue=false;
     });
 
+  }
+  private getMeta()
+  {
+    debugger;
+    this.apiUrl.getData("values/meta").subscribe(response=>{
+      this.meta=response;
+      console.log([this.meta.t1.p3.type]);
+    }
+    );
   }
   private fetchData()
   {
@@ -80,4 +90,5 @@ export class ProjectComponent implements OnInit {
     console.log(this.SignupForm.value);
     this.payLoad = JSON.stringify(this.SignupForm.value);
   }
+  
 }

@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../app/libs/services/api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProjectComponent } from './components/project/project.component';
+import { ProjectComponent } from './components/app-project/app-project.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';

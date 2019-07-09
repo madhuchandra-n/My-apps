@@ -12,9 +12,14 @@
         <div class="card-body">
             <blockquote class="blockquote mb-0">
                 <p>About Client : {{newAns1.client}}</p>
-                <p class="blockquote">
-                    <li title="Source Title">{{newAns1.details}}</li>
-                </p>
+                <!-- <p class="blockquote"> -->
+                    <!-- <li title="Source Title">{{newAns1.details}}</li> -->
+                    <div class="form-group mb-5">
+                        <label>{{meta.t1.p3?.name}}</label>
+                        <input type="text" [(ngModel)]="newAns1.project" placeholder="{{meta.t1.p3?.placeholder}}"
+                            [readonly]="meta.t1.p3.isEditable === false"/>
+                    </div>
+                <!-- </p> -->
                 <p>Start Date</p>
                 <p class="blockquote">
                     <li title="Source Title">{{newAns1.start_date}}</li>
@@ -39,7 +44,7 @@
     <div *ngIf="!newAns1" class="card-header text-center">
         Select a project from the list
     </div>
-</div>
+    <!-- </div>
     <div *ngIf="newAns1 && clickedTrue==true" class="jumbotron">
         <div class="container">
             <form (ngSubmit)="onSubmit()" [formGroup]="SignupForm">
@@ -92,4 +97,4 @@
                 </div>
             </form>
         </div>
-</div>
+</div> -->

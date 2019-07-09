@@ -1,0 +1,181 @@
+{
+  "title": "Inventory Visualization App",
+  "getApi": "http://localhost:55669/api/values",
+  "postApi": "http://localhost:55669/api/values",
+  "pmrCanSave": true,
+  "pmrCanView": true,
+  "pmrCanEdit": true,
+  "defaultData": {
+    "MasterDetails": [
+      {
+        "Attribute1": "",
+        "Attribute1ISNULL": false,
+        "Attribute2": "",
+        "Attribute2ISNULL": false,
+        "Attribute3": "",
+        "Attribute3ISNULL": false,
+        "Attribute4": "",
+        "Attribute4ISNULL": false,
+        "Attribute5": "",
+        "Attribute5ISNULL": false,
+        "Attribute6": "",
+        "Attribute6ISNULL": false,
+        "Attribute7": "",
+        "Attribute7ISNULL": false,
+        "Attribute8": "",
+        "Attribute8ISNULL": false,
+        "Attribute9": "",
+        "Attribute9ISNULL": false,
+        "Attribute10": "",
+        "Attribute10ISNULL": false,
+        "Attribute11": "",
+        "Attribute11ISNULL": false,
+        "Attribute12": "",
+        "Attribute12ISNULL": false,
+        "Attribute13": "",
+        "Attribute13ISNULL": false,
+        "Attribute14": "",
+        "Attribute14ISNULL": false,
+        "Attribute15": "",
+        "Attribute15ISNULL": false
+      }
+    ]
+	},
+	"t1": {
+	    "p1": {
+          "name": "Attribute1",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute1 ",
+          "tab": "MasterDetails"
+        },
+        "p2": {
+          "name": "Attribute2",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute2",
+          "tab": "MasterDetails"
+        },
+        "p3": {
+          "name": "Attribute3",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute3",
+          "tab": "MasterDetails"
+        },
+		"p4": {
+          "name": "Attribute4",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute4",
+          "tab": "MasterDetails"
+        },
+		"p5": {
+          "name": "Attribute5",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute5",
+          "tab": "MasterDetails"
+        },
+		"p6": {
+          "name": "Attribute6",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute6",
+          "tab": "MasterDetails"
+        },
+		"p7": {
+          "name": "Attribute7",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute7",
+          "tab": "MasterDetails"
+        },
+		"p8": {
+          "name": "Attribute8",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute8",
+          "tab": "MasterDetails"
+        },
+		"p9": {
+          "name": "Attribute9",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute9",
+          "tab": "MasterDetails"
+        },
+		"p10": {
+          "name": "Attribute10",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute10",
+          "tab": "MasterDetails"
+        },
+        "p11": {
+          "name": "Attribute11",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute11",
+          "tab": "MasterDetails"
+        },
+		"p12": {
+          "name": "Attribute12",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute11",
+          "tab": "MasterDetails"
+        },
+		"p13": {
+          "name": "Attribute13",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute13",
+          "tab": "MasterDetails"
+        },
+        "p14": {
+          "name": "Attribute14",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute14",
+          "tab": "MasterDetails"
+        },
+        "p15": {
+          "name": "Attribute15",
+          "isEditable": true,
+          "placeholder": "",
+          "controlType": 0,
+          "isMandatory": false,
+          "type": "Attribute15",
+          "tab": "MasterDetails"
+        }
+	}
+}

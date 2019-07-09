@@ -49,7 +49,7 @@ export class ProjectComponent implements OnInit {
   }
   private fetchData()
   {
-    this.apiUrl.getData("values").subscribe(response=>{ 
+    this.apiUrl.getData().subscribe(response=>{ 
       this.project = response;
         for( let i=0; i<this.project.items.length; i++)
         {
@@ -76,7 +76,6 @@ export class ProjectComponent implements OnInit {
     this.clickedTrue=false;
   }
   onSubmit() {
-    debugger;
     console.log(this.SignupForm.value);
     this.payLoad = JSON.stringify(this.SignupForm.value);
   }

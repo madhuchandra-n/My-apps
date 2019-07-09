@@ -19,9 +19,9 @@ export class ConfigService {
     if (apiBaseUrl)
       this._apiBaseUrl = apiBaseUrl;
   }
-  public getData(value)
+  public getData()
   {
-    return this.http.get(this._apiBaseUrl+value);
+    return this.http.get(this._apiBaseUrl);
   }
   private readGcfModelFromIndexHtml() {
 

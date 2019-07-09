@@ -27,7 +27,7 @@ export class GridComponent implements OnInit {
     this.getPostMethod1();
   }
   private getPostMethod1() {
-    this.apiUrl.getData("values").subscribe(val=>{
+    this.apiUrl.getData().subscribe(val=>{
       this.newPost=val as string[];
       this.names=this.newPost.items;
       
